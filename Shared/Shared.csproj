@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{538C3B7C-645D-4F90-AD3D-FAE5018D1B72}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Shared</RootNamespace>
+    <AssemblyName>Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Parser\CharacterSet.cs" />
+    <Compile Include="Models\Parser\Exceptions\OperationException.cs" />
+    <Compile Include="Models\Parser\Nodes\Node.cs" />
+    <Compile Include="Models\Parser\Expression.cs" />
+    <Compile Include="Models\ISerializableKeyValuePair.cs" />
+    <Compile Include="Models\Parser\Nodes\AbstractSyntaxTree.cs" />
+    <Compile Include="Models\Parser\Nodes\DiadicNode.cs" />
+    <Compile Include="Models\Parser\Nodes\ErrorNode.cs" />
+    <Compile Include="Models\Parser\Nodes\MonadicNode.cs" />
+    <Compile Include="Models\Parser\Nodes\MultiNode.cs" />
+    <Compile Include="Models\Parser\Nodes\BaseNode.cs" />
+    <Compile Include="Models\Parser\Nodes\TriadicNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\AdditionNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\AssignmentNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\BitshiftNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\BitwiseAndNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\BitwiseOrNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\BitwiseXorNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\ComparisonNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\DivisionNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\DoubleQuoteStringNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\EqualityNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\InstructionNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\LogicalAndNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\LogicalOrNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\ModulusNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\MultiplicationNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\SingleQuoteStringNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\SubtractionNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\TernaryNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\UnaryNode.cs" />
+    <Compile Include="Models\Parser\OperationNodes\VariableNode.cs" />
+    <Compile Include="Models\SerializableKeyValuePair.cs" />
+    <Compile Include="Models\Parser\Tokens\Token.cs" />
+    <Compile Include="Models\Parser\Variables\VariableManager.cs" />
+    <Compile Include="Business\Operations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

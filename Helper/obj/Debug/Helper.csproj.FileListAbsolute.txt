@@ -1,0 +1,9 @@
+C:\Users\Azure\RiderProjects\Calculator\Helper\bin\Debug\Helper.dll
+C:\Users\Azure\RiderProjects\Calculator\Helper\bin\Debug\Helper.pdb
+C:\Users\Azure\RiderProjects\Calculator\Helper\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Azure\RiderProjects\Calculator\Helper\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Azure\RiderProjects\Calculator\Helper\obj\Debug\Helper.csproj.AssemblyReference.cache
+C:\Users\Azure\RiderProjects\Calculator\Helper\obj\Debug\Helper.csproj.CoreCompileInputs.cache
+C:\Users\Azure\RiderProjects\Calculator\Helper\obj\Debug\Helper.csproj.CopyComplete
+C:\Users\Azure\RiderProjects\Calculator\Helper\obj\Debug\Helper.dll
+C:\Users\Azure\RiderProjects\Calculator\Helper\obj\Debug\Helper.pdb
